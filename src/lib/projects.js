@@ -3,7 +3,7 @@ export const projects = [
     slug: "medimind",
     name: "MediMind",
     shortDescription: "A full-stack AI-powered clinical decision support platform.",
-    image: "/projects/medimind.jpg",
+    image: "/projects/medimind.png",
     techStack: ["Next.js", "TypeScript", "Express.js", "MongoDB", "Groq AI", "Google Gemini"],
     description: "MediMind is a full-stack AI-powered clinical decision support platform that gives patients and clinicians access to three intelligent medical tools — a symptom checker, a medical document analyzer, and a drug interaction detector — all in one place. The symptom checker uses Groq AI to analyze user-described symptoms in natural language, assign a clinical urgency score from 1–10, and recommend the right specialist, while the document analysis tool uses Google Gemini AI to extract key findings from uploaded lab results, MRI reports, and prescriptions. Built with Next.js, TypeScript, and Express.js on a MongoDB backend, MediMind tackles one of healthcare's most serious problems — the 250,000+ preventable medical errors that occur every year — by making expert-level clinical intelligence freely available to everyone.",
     liveUrl: "https://medimind-client.vercel.app/", 
