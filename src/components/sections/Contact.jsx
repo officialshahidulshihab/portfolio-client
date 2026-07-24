@@ -225,7 +225,7 @@ export default function Contact() {
     setErrors({});
 
     try {
-      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
+      const API_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000").replace(/\/$/, "");
       const res = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -240,7 +240,8 @@ export default function Contact() {
 
       // Auto-dismiss after 5s
       setTimeout(dismissToast, 5000);
-    } catch {
+    } catch (error) {
+      console.error("Contact Form Error:", error);
       setStatus("error");
       setToast({ type: "error", message: "Something went wrong. Please try again." });
       setTimeout(dismissToast, 5000);
